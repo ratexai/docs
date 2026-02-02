@@ -1,0 +1,47 @@
+---
+title: "MetaScore API Overview"
+description: "rMS API — real-time token scores for product integration"
+---
+
+## MetaScore API (rMS)
+
+The MetaScore API provides real-time RateXAI MetaScore (rMS) ratings for crypto assets. Designed for product integration — dashboards, portfolio apps, trading terminals, compliance tools, and automated pipelines.
+
+## Authentication
+
+```http
+X-API-Key: YOUR_API_KEY
+Content-Type: application/json
+```
+
+## Base URL
+
+```
+https://api.ratex.ai/v1/rms
+```
+
+## Tier Summary
+
+| SKU | Objects / month | Freshness | Optional calls cap | Price / month |
+|---|---:|---|---:|---:|
+| API-900 | 50 assets | daily | 200k | $900 |
+| API-2500 | 500 assets | daily + intraday snapshots | 1M | $2,500 |
+| API-5000 | unlimited (fair use) | intraday + webhooks by SLA | 5M | $5,000 |
+
+<Note>
+  Detailed request/response specifications are provided with API access. See [MetaScore API pricing](/products/metascore-api) for full commercial details.
+</Note>
+
+## Endpoints
+
+| Category | Method | Endpoint | Description |
+|---|---|---|---|
+| Score | GET | `/v1/rms/{asset}` | Current rMS score for an asset |
+| Breakdown | GET | `/v1/rms/{asset}/breakdown` | Factor-level scoring breakdown |
+| Batch | POST | `/v1/rms/batch` | Batch scoring for multiple assets |
+| Watchlist | GET | `/v1/rms/whitelist` | Monitored assets and alert status |
+| Exports | GET | `/v1/exports/rms/daily` | Daily export of all scored assets |
+
+<Card title="Full Endpoint Documentation" icon="arrow-right" href="/api-reference/metascore-endpoints">
+  Endpoint details, parameters, and response structures.
+</Card>

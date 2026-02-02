@@ -1,0 +1,55 @@
+---
+title: "Chain Data Endpoints"
+description: "Endpoint categories for the Indexed Chain Data API"
+---
+
+## Market Snapshot
+
+```http
+GET /v1/solana/market/{asset}/snapshot
+```
+
+Returns the current market snapshot for an asset on Solana. Includes price, volume, market cap, and related aggregate metrics.
+
+**Path parameters:**
+- `asset` (string, required) — Asset identifier (e.g., token mint address or symbol)
+
+---
+
+## Holders Snapshot
+
+```http
+GET /v1/solana/{asset}/holders/snapshot
+```
+
+Returns holder distribution and concentration data for an asset. Includes top holder percentages, holder count tiers, and concentration metrics.
+
+**Path parameters:**
+- `asset` (string, required) — Asset identifier
+
+---
+
+## Liquidity Pools (Scope-Based)
+
+```http
+GET /v1/solana/{asset}/liquidity/pools
+```
+
+Returns liquidity pool data for an asset across DEXs. Includes pool sizes, TVL, volume, and fee metrics.
+
+**Path parameters:**
+- `asset` (string, required) — Asset identifier
+
+---
+
+## Exports
+
+```http
+GET /v1/solana/exports/daily
+```
+
+Returns the daily export of all chain aggregates. Available as a JSON array or downloadable CSV.
+
+<Note>
+  Detailed response schemas, error codes, and rate limit specifications are provided with API access. Contact the RateXAI team for onboarding documentation.
+</Note>

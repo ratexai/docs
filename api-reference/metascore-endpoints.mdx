@@ -1,0 +1,65 @@
+---
+title: "MetaScore Endpoints"
+description: "Core endpoints for the MetaScore API (rMS)"
+---
+
+## Score
+
+```http
+GET /v1/rms/{asset}
+```
+
+Returns the current MetaScore (rMS) for a single asset. Includes the 0-100 score, letter-grade band (AAA-D), trust score, and risk flags.
+
+**Path parameters:**
+- `asset` (string, required) — Asset identifier (e.g., `bitcoin`, `ethereum`, `layerzero`)
+
+---
+
+## Breakdown
+
+```http
+GET /v1/rms/{asset}/breakdown
+```
+
+Returns the factor-level scoring breakdown for a single asset. Includes individual factor scores, weights, and rationale for each scoring component.
+
+**Path parameters:**
+- `asset` (string, required) — Asset identifier
+
+---
+
+## Batch
+
+```http
+POST /v1/rms/batch
+```
+
+Scores multiple assets in a single request. Returns an array of rMS scores with band and risk flags for each asset.
+
+**Request body:**
+- `assets` (array of strings, required) — List of asset identifiers
+
+---
+
+## Watchlist
+
+```http
+GET /v1/rms/whitelist
+```
+
+Returns the list of monitored assets and their current alert status. Includes score change alerts, risk flag changes, and rating band transitions.
+
+---
+
+## Exports
+
+```http
+GET /v1/exports/rms/daily
+```
+
+Returns the daily export of all scored assets. Available as a JSON array or downloadable CSV. Includes score, band, trust score, and key flags for each asset.
+
+<Note>
+  Detailed response schemas, error codes, and rate limit specifications are provided with API access. Contact the RateXAI team for onboarding documentation.
+</Note>
