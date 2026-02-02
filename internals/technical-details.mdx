@@ -1,0 +1,40 @@
+---
+title: "Technical Details"
+description: "Scoring engine, data sources, job metadata, and important notes"
+---
+
+## Technical Details (Public)
+
+**Scoring Engine:** RXAI Model
+
+**Data sources (non-exhaustive):**
+
+- Market data aggregators: current prices, market cap, volume, rank, supply
+- Market data aggregators: ATH/ATL and historical context
+- Protocol analytics: revenue, fees, active users
+- Tokenomics trackers: unlock schedules
+- Blockchain explorers: holders, distributions, smart contracts
+- DeFi TVL trackers
+- Public team profiles and developer activity sources
+- Public social/community metrics sources
+
+## Job ID Format
+
+```
+{type}_{timestamp}_{random_string}
+Example: posttge_1737123456789_abc123xyz
+```
+
+## Metadata Fields
+
+- `job_id`: Unique identifier
+- `started_at`: ISO 8601 timestamp
+- `completed_at`: ISO 8601 timestamp
+- `execution_time_seconds`: Total processing time
+
+## Important Notes
+
+1. **Automated Data Collection**: The API collects and cross-checks relevant public data for each request.
+2. **Real-Time Analysis**: Data is collected in real-time during each request.
+3. **Data Accuracy**: If conflicting information is found, the engine uses the most recent and most reliable source.
+4. **Rate Limits**: Consider request throttling on your end for production usage.

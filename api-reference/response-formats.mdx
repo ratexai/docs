@@ -1,0 +1,109 @@
+---
+title: "Response Formats"
+description: "Minimal, standard, and full response format structures"
+---
+
+## 1. Minimal Format (`output_format: "minimal"`)
+
+Quick rating summary.
+
+**Response structure:**
+
+```json
+{
+  "job_id": "posttge_1737123456789_abc123xyz",
+  "type": "posttge",
+  "project": "LayerZero",
+  "rating": {
+    "band": "BBB",
+    "score": 62
+  },
+  "trust_score": {
+    "score": 85
+  },
+  "vfr": {
+    "value": 0.97,
+    "zone": "FAIR"
+  },
+  "execution_time_seconds": 75
+}
+```
+
+## 2. Standard Format (`output_format: "standard"`)
+
+Key sections with scoring breakdown.
+
+**Response structure:**
+
+```json
+{
+  "job_id": "posttge_1737123456789_abc123xyz",
+  "type": "posttge",
+  "metadata": { ... },
+  "rating": {
+    "band": "BBB",
+    "score": 62
+  },
+  "trust_score": {
+    "score": 85
+  },
+  "vfr": {
+    "value": 0.97,
+    "zone": "FAIR"
+  },
+  "scoring_breakdown": {
+    "total_score": 62,
+    "max_score": 100,
+    "factors": [
+      {
+        "factor": "Supply & Inflation",
+        "weight": 18,
+        "score": 12,
+        "rationale": "..."
+      }
+    ]
+  },
+  "tldr": {
+    "strengths": ["..."],
+    "key_risks": ["..."],
+    "verdict": "..."
+  },
+  "recommendations": { ... },
+  "execution_time_seconds": 120
+}
+```
+
+## 3. Full Format (`output_format: "full"`)
+
+Complete report with all sections.
+
+### Post-TGE Full Report Structure (12 sections)
+
+1. `metadata` - Basic project information
+2. `section_1_executive_summary` - Rating, trust score, VFR, key metrics
+3. `section_2_tldr` - Strengths, weaknesses, opportunity, risk
+4. `section_3_scoring_breakdown` - Detailed scoring by 8 factors (100 points total)
+5. `section_4_supply_float_dynamics` - Token supply, inflation, unlock schedule
+6. `section_5_holders_smart_money` - Holder distribution, whale activity
+7. `section_6_economics_sustainability` - Revenue, fees, unit economics, financial evolution
+8. `section_7_liquidity_market_quality` - Volume, exchanges, liquidity depth
+9. `section_8_technical_market_structure` - Price trends, momentum, technical analysis
+10. `section_9_fair_valuation_vfr` - VFR calculation methodology and interpretation
+11. `section_10_competitive_landscape` - Competitor analysis, market positioning
+12. `section_11_risk_assessment` - Critical risks, mitigation strategies
+13. `section_12_summary_recommendations` - Investment thesis, entry/exit strategy
+
+### Pre-TGE Full Report Structure (11 sections)
+
+1. `metadata` - Basic project information
+2. `section_1_executive_summary` - Rating, trust score, key metrics
+3. `section_2_tldr` - Strengths, weaknesses, opportunity, risk
+4. `section_3_scoring_breakdown` - Detailed scoring by 7 factors (100 points total)
+5. `section_4_team_analysis` - Team credentials, verification, background
+6. `section_5_product_technology` - Product status, technical architecture, GitHub activity
+7. `section_6_market_landscape` - TAM, competitors, market positioning
+8. `section_7_tokenomics` - Token distribution, vesting, utility
+9. `section_8_traction_metrics` - Users, revenue, partnerships, social metrics
+10. `section_9_valuation_analysis` - Estimated valuation vs comparables
+11. `section_10_risk_assessment` - Critical risks and red flags
+12. `section_11_summary_recommendations` - Investment thesis, recommendations

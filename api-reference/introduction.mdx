@@ -1,33 +1,38 @@
 ---
-title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+title: "API Overview"
+description: "RateXAI Scoring API endpoint and authentication"
 ---
 
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
+## API Endpoint
 
-## Welcome
-
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
-
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
+```http
+POST https://n8n.value8.dev/webhook/scoring-api.ratex.ai
+```
 
 ## Authentication
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+Required headers:
 
-```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
+```http
+X-API-Key: YOUR_API_KEY
+Content-Type: application/json
 ```
+
+## Overview
+
+RateXAI Scoring API delivers Pre-TGE and Post-TGE token ratings powered by the RXAI Model. Each request runs an automated research pipeline that aggregates, normalizes, and cross-validates signals from 1,000+ sources — combining RateXAI BigData with external feeds (market data, on-chain explorers, tokenomics/unlocks, protocol analytics, GitHub/dev activity, news/media, social and ecosystem signals).
+
+## Analysis Types
+
+| Type | Value | Description |
+|---|---|---|
+| Post-TGE | `"posttge"` | For tokens already listed on exchanges and actively trading |
+| Pre-TGE | `"pretge"` | For projects before token launch or TGE |
+
+## Output Formats
+
+| Format | Value | Description |
+|---|---|---|
+| Minimal | `"minimal"` | Quick rating summary |
+| Standard | `"standard"` | Key sections with scoring breakdown |
+| Full | `"full"` | Complete report with all sections (default) |

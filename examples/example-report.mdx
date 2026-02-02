@@ -1,0 +1,385 @@
+---
+title: "Example Report"
+description: "Complete example of a Pre-TGE scoring report (Berachain)"
+---
+
+## Example: Berachain Pre-TGE Report
+
+Below is a complete example of a Pre-TGE scoring report output for Berachain. This demonstrates the full JSON structure returned by the API.
+
+```json
+[
+    {
+        "metadata": {
+            "analysis_type": "pretge",
+            "project_name": "Berachain",
+            "category": "Layer 1 Blockchain",
+            "blockchain": "Cosmos SDK / EVM-Compatible",
+            "stage": "mainnet_launched",
+            "token_symbol": "BERA",
+            "analysis_date": "2026-01-29",
+            "note": "Berachain launched mainnet on February 6, 2025. This is a POST-TGE analysis rather than PRE-TGE."
+        },
+        "section_1_executive_summary": {
+            "rating": {
+                "band": "B",
+                "score": 48,
+                "rating_text": "Weak"
+            },
+            "trust_score": {
+                "score": 52,
+                "interpretation": "Moderate - Strong VC backing offset by controversy"
+            },
+            "key_metrics": {
+                "mainnet_status": "Live (launched Feb 6, 2025)",
+                "total_funding": "$142M+ (Series A: $42M, Series B: $100M)",
+                "lead_investors": "Polychain Capital, Framework Ventures, Brevan Howard",
+                "current_tvl": "$990M (down 71% from $3.5B peak)",
+                "token_price": "$0.60-0.85 (down 93% from $14.83 ATH)",
+                "market_cap": "$90-120M",
+                "fdv": "$300-450M",
+                "circulating_supply": "140-150M BERA (28-30% of total)",
+                "total_supply": "500M genesis + inflationary",
+                "community_size": "940K Twitter, 457K Discord"
+            },
+            "verdict": "CAUTION - Berachain has mainnet live with innovative Proof-of-Liquidity but faces severe post-launch challenges including 93% price decline, controversial airdrop, insider selling allegations, security exploit ($12M Balancer hack), and VC refund controversy. Strong tech and backing undermined by execution issues."
+        },
+        "section_2_tldr": {
+            "strengths": [
+                "Mainnet LIVE with real product and $990M TVL",
+                "Tier-1 VC backing: $142M from Polychain, Framework, Brevan Howard",
+                "Novel Proof-of-Liquidity consensus mechanism",
+                "EVM-identical - full Ethereum compatibility",
+                "Active development: Multiple hardforks, BeaconKit framework",
+                "Large community: 940K Twitter, 457K Discord",
+                "Native DeFi stack: BEX, BEND, BERPS"
+            ],
+            "weaknesses": [
+                "Token down 93% from ATH ($14.83 → $0.60-0.85)",
+                "TVL crashed 71% from $3.5B to $990M",
+                "Controversial airdrop favored VCs over testnet users",
+                "Insider selling: Co-founder allegedly dumped 200K BERA",
+                "Security exploit: $12M Balancer hack (recovered via hardfork)",
+                "Brevan Howard $25M refund clause controversy",
+                "Anonymous founding team raises trust concerns",
+                "High inflation (10% yearly) and VC overhang (34.3% allocation)"
+            ],
+            "opportunity": "If PoL mechanism succeeds and team rebuilds trust, could become leading DeFi-native L1",
+            "risk": "High - Price crash, governance controversy, and VC unlock (Feb 6, 2026) pose existential threats"
+        },
+        "section_3_scoring_breakdown": {
+            "total_score": 48,
+            "max_score": 100,
+            "factors": [
+                {
+                    "factor": "Product Reality",
+                    "weight": 15,
+                    "score": 13,
+                    "rationale": "Mainnet live since Feb 2025 with working product, native apps (BEX, BEND, BERPS), $990M TVL, and 100M+ transactions. Active development with multiple hardforks. (-2 points for security exploit and declining user activity)"
+                },
+                {
+                    "factor": "Market Landscape",
+                    "weight": 15,
+                    "score": 11,
+                    "rationale": "Large TAM (DeFi L1 market), novel PoL differentiator, but strong competition from Ethereum, Solana, Avalanche. TVL peaked at $3.5B (6th largest) but now declining. Competitive positioning weakened post-launch."
+                },
+                {
+                    "factor": "Team Credentials",
+                    "weight": 10,
+                    "score": 3,
+                    "rationale": "Anonymous founders (Smokey, Papa Bear, Dev Bear, Homme Bera) with no verifiable LinkedIn. Originated from Bong Bears NFT project. Team size 30+ but lacks transparency. Insider selling allegations damage credibility."
+                },
+                {
+                    "factor": "Traction Proof",
+                    "weight": 20,
+                    "score": 7,
+                    "rationale": "Initially strong: $3.1B pre-launch deposits, $3.5B TVL peak, 2.2M users. Now declining: $990M TVL (-71%), 330K users (-85%). 940K Twitter, 457K Discord. Revenue minimal. Ecosystem fragile post-crash."
+                },
+                {
+                    "factor": "Fundraising Intel",
+                    "weight": 10,
+                    "score": 8,
+                    "rationale": "Tier-1 VCs: Polychain, Framework, Brevan Howard, Samsung Next, HashKey. $142M total raised at $420M (Series A) and $1.5B (Series B) valuations. (-2 points for Brevan Howard refund controversy and lack of transparency)"
+                },
+                {
+                    "factor": "Valuation Sanity",
+                    "weight": 15,
+                    "score": 3,
+                    "rationale": "Current FDV $300-450M vs $90-120M market cap = massive discount to raises. Series B at $1.5B now 67-80% underwater. Compared to Avalanche ($16B FDV), Fantom ($2B), reasonable IF executes. But 93% crash indicates market rejects valuation."
+                },
+                {
+                    "factor": "Structural/Legal",
+                    "weight": 15,
+                    "score": 3,
+                    "rationale": "Major red flags: 34.3% to investors, 16.8% to team with 1-year cliff then 24-month vesting. Airdrop controversy (15.8%). VC unlock Feb 6, 2026 poses dump risk. BGT non-transferable but can burn 1:1 for BERA = loophole. 10% inflation. Secret refund clause. Cayman Islands entity."
+                }
+            ]
+        },
+        "section_4_team_analysis": {
+            "founding_team": [
+                {
+                    "name": "Smokey the Bera",
+                    "role": "Co-Founder",
+                    "background": "Pseudonymous. Decade of experience building/scaling companies and VC. Leads ecosystem, growth, ops.",
+                    "linkedin_verified": false,
+                    "concerns": "Anonymous identity raises accountability issues"
+                },
+                {
+                    "name": "Papa Bear",
+                    "role": "Co-Founder",
+                    "background": "Pseudonymous. Early DeFi participant since 2015.",
+                    "linkedin_verified": false,
+                    "concerns": "No verifiable credentials"
+                },
+                {
+                    "name": "Dev Bear",
+                    "role": "Co-Founder/CTO",
+                    "background": "Pseudonymous. Technical lead.",
+                    "linkedin_verified": false,
+                    "concerns": "Allegedly sold 200K BERA from airdrop immediately post-launch"
+                },
+                {
+                    "name": "Homme Bera (Man Bera)",
+                    "role": "Co-Founder",
+                    "background": "Pseudonymous. Early DeFi participant since 2015.",
+                    "linkedin_verified": false,
+                    "concerns": "No public presence"
+                }
+            ],
+            "team_size": "51-200 employees (per LinkedIn)",
+            "advisors": "Not publicly disclosed",
+            "origin_story": "Started as Bong Bears NFT project (2021), evolved into full L1 blockchain",
+            "assessment": "HIGH RISK - Fully pseudonymous team with no verifiable credentials raises major red flags. While crypto-native teams can succeed, lack of accountability enabled alleged insider selling. Team expanded to 30+ 'Beras' from top protocols (Ethereum, Sui, Polygon, Coinbase, Aave), but names undisclosed."
+        },
+        "section_5_product_technology": {
+            "technical_architecture": {
+                "consensus": "Proof-of-Liquidity (PoL) - novel mechanism aligning security with liquidity",
+                "vm_compatibility": "EVM-identical via BeaconKit framework",
+                "base_layer": "Cosmos SDK with CometBFT consensus",
+                "execution_clients": "Modified Geth (bera-geth) and Reth (bera-reth)",
+                "finality": "Single-slot finality, 2-second block times",
+                "throughput": "High-performance, thousands of TPS claimed"
+            },
+            "key_innovations": [
+                "Proof-of-Liquidity: Validators stake BERA, direct BGT emissions to reward vaults",
+                "Tri-token model: BERA (gas), BGT (governance, non-transferable), HONEY (stablecoin)",
+                "BeaconKit: Modular consensus framework for EVM chains",
+                "Native DeFi stack: BEX (DEX), BEND (lending), BERPS (perps)"
+            ],
+            "github_activity": {
+                "repositories": "Active - berachain/bera-geth, berachain/DefiLlama-Adapters, berachain/.github",
+                "recent_releases": "Multiple in 2025: Prague4 fork (Nov 2025), Bectra upgrade, BeaconKit 1.3.4",
+                "commit_frequency": "Regular commits, emergency fixes for exploits",
+                "code_quality": "Professional, forked from go-ethereum"
+            },
+            "audits": "Audits mentioned but not publicly available. Bug bounty via Immunefi.",
+            "mainnet_status": "LIVE since February 6, 2025. Experienced Balancer exploit requiring hardfork (Nov 2025).",
+            "assessment": "STRONG TECH - EVM-identical with novel PoL is genuinely innovative. BeaconKit framework solid. Active development. BUT security exploit and network halts raise concerns about production readiness."
+        },
+        "section_6_market_landscape": {
+            "target_market": "DeFi-focused Layer 1 blockchain",
+            "total_addressable_market": "$100B+ (entire L1 DeFi ecosystem)",
+            "competitors": [
+                {
+                    "name": "Ethereum",
+                    "tvl": "$58B",
+                    "advantage": "Dominant, most mature, 53% market share",
+                    "weakness": "High fees, slower"
+                },
+                {
+                    "name": "Solana",
+                    "tvl": "$8B",
+                    "advantage": "Fast, cheap, growing ecosystem",
+                    "weakness": "Network outages"
+                },
+                {
+                    "name": "Avalanche",
+                    "tvl": "$2.9B",
+                    "advantage": "EVM-compatible, subnets",
+                    "weakness": "Less differentiation"
+                },
+                {
+                    "name": "Fantom/Sonic",
+                    "tvl": "$1-2B",
+                    "advantage": "Fast, cheap, rebranding",
+                    "weakness": "Smaller ecosystem"
+                },
+                {
+                    "name": "Sei",
+                    "tvl": "Growing",
+                    "advantage": "Parallel EVM",
+                    "weakness": "Newer"
+                }
+            ],
+            "competitive_position": "Initially strong (6th by TVL at $3.26B peak), now declining. PoL is unique but unproven. Lost ground to established players post-crash.",
+            "market_trends": [
+                "DeFi TVL recovering to $60B (highest since Aug 2022)",
+                "L1 competition intensifying",
+                "Low float, high FDV model backlash (84.7% of 2025 TGEs underwater)",
+                "Focus on real utility over speculation"
+            ],
+            "assessment": "MODERATE OPPORTUNITY - Large TAM but highly competitive. PoL differentiates but needs proof of concept. Current trajectory negative."
+        },
+        "section_7_tokenomics": {
+            "token_distribution": {
+                "initial_core_contributors": "16.8% (84M BERA)",
+                "investors": "34.3% (171.5M BERA)",
+                "community_total": "48.9% (244.5M BERA)",
+                "airdrop": "15.8% (79M BERA)",
+                "future_community": "13.1% (65.5M BERA)",
+                "validator_emissions": "20% (100M BERA)"
+            },
+            "vesting_schedule": {
+                "team_investors": "1-year cliff, then 1/6 unlock, remaining 5/6 vest linearly over 24 months",
+                "first_unlock": "February 6, 2026 (1 year post-launch)",
+                "unlock_amount": "63.75M BERA (~$38M at current price, 12% of total supply)"
+            },
+            "token_utility": {
+                "bera": "Gas token, validator staking (250K-10M required)",
+                "bgt": "Governance, earned via staking/liquidity, non-transferable, burns 1:1 to BERA",
+                "honey": "Native stablecoin, soft-pegged to USD"
+            },
+            "inflation": "~10% yearly via BGT emissions (proposed reduction to 5%)",
+            "concerns": [
+                "High VC allocation (34.3%) with 1-year vesting creates dump risk",
+                "BGT burn loophole allows VCs to extract liquidity while locked",
+                "Controversial airdrop favored Binance users over testnet contributors",
+                "Secret Brevan Howard $25M refund clause",
+                "Only 15.8% to community vs 51.1% to insiders/investors"
+            ],
+            "assessment": "POOR TOKENOMICS - Heavily skewed toward insiders. VC unlock Feb 6, 2026 is major risk. BGT loophole enables dumping despite vesting. Airdrop controversy damaged community trust."
+        },
+        "section_8_traction_metrics": {
+            "tvl_history": {
+                "pre_launch": "$3.1B (Boyco deposits)",
+                "peak": "$3.5B (Feb-Mar 2025, 6th largest DeFi chain)",
+                "current": "$990M (Jan 2026, down 71%)",
+                "top_protocols": "Infrared Finance ($1.52B), Kodiak ($1.12B), Concrete ($800M)"
+            },
+            "user_metrics": {
+                "peak_mau": "2.2M (Feb-Mar 2025)",
+                "current_mau": "330K (Jan 2026, down 85%)",
+                "transactions": "100M+ since launch"
+            },
+            "social_metrics": {
+                "twitter": "940K followers",
+                "discord": "457K members",
+                "sentiment": "Mixed - initially bullish, now skeptical"
+            },
+            "revenue": "Minimal - $1,061 in fees (24h), $0.003623 project revenue",
+            "partnerships": [
+                "Binance (listing, airdrop)",
+                "Coinbase, OKX, Kraken, Gate (listings)",
+                "Ether.Fi, Pendle (DeFi integrations)",
+                "Google Cloud (infrastructure partner)",
+                "300+ ecosystem projects building"
+            ],
+            "assessment": "DECLINING TRACTION - Initially explosive growth now reversing. 85% user drop and 71% TVL decline signal serious retention issues. Revenue insufficient to sustain operations."
+        },
+        "section_9_valuation_analysis": {
+            "current_metrics": {
+                "token_price": "$0.60-0.85",
+                "market_cap": "$90-120M",
+                "fdv": "$300-450M",
+                "circulating_supply": "28-30%",
+                "ath": "$14.83 (Feb 6, 2025)",
+                "ath_market_cap": "$1.4B",
+                "current_vs_ath": "-93% to -96%"
+            },
+            "fundraising_valuations": {
+                "series_a": "$420.69M (Apr 2023)",
+                "series_b": "$1.5B (Apr 2024)",
+                "current_vs_series_b": "-67% to -80% (investors underwater)"
+            },
+            "comparable_valuations": {
+                "ethereum": "$58B TVL, dominant",
+                "solana": "$8B TVL",
+                "avalanche": "$16B FDV, $2.9B TVL",
+                "fantom": "$2B FDV, $1-2B TVL",
+                "berachain": "$300-450M FDV, $990M TVL"
+            },
+            "valuation_multiples": {
+                "fdv_to_tvl": "0.3-0.45x (low, suggests undervalued IF TVL stabilizes)",
+                "market_cap_to_tvl": "0.09-0.12x (very low)"
+            },
+            "fair_value_estimate": "$500M-1B FDV IF executes, but current trajectory suggests $200-400M",
+            "assessment": "DEEPLY DISCOUNTED vs raises but for good reason. 93% crash reflects market rejection. Could be value if turnaround succeeds, but high probability of further dilution. VC unlock Feb 2026 will test price floor."
+        },
+        "section_10_risk_assessment": {
+            "critical_risks": [
+                {
+                    "risk": "VC Token Unlock",
+                    "severity": "CRITICAL",
+                    "probability": "Certain",
+                    "impact": "63.75M BERA unlock Feb 6, 2026 = 12% supply, ~$40M at current price. VCs underwater 67-80%, high dump probability.",
+                    "mitigation": "None disclosed"
+                },
+                {
+                    "risk": "Brevan Howard Refund Clause",
+                    "severity": "HIGH",
+                    "probability": "Medium",
+                    "impact": "$25M refund right if price <$3. Could force Foundation to liquidate assets.",
+                    "mitigation": "Team claims Nova increased holdings"
+                },
+                {
+                    "risk": "Security Exploits",
+                    "severity": "HIGH",
+                    "probability": "Already occurred",
+                    "impact": "$12M Balancer hack (Nov 2025) required emergency hardfork. Production issues persist.",
+                    "mitigation": "Funds recovered, bug bounty active"
+                },
+                {
+                    "risk": "Death Spiral",
+                    "severity": "HIGH",
+                    "probability": "High",
+                    "impact": "85% user loss, 71% TVL decline = declining incentives → more exits → lower liquidity → fewer users",
+                    "mitigation": "Staking programs, new partnerships"
+                },
+                {
+                    "risk": "Team Anonymity/Insider Selling",
+                    "severity": "MEDIUM",
+                    "probability": "High",
+                    "impact": "Co-founder allegedly dumped 200K BERA. No accountability mechanism for anonymous team.",
+                    "mitigation": "None"
+                }
+            ],
+            "regulatory_risks": "Moderate - Cayman Islands entity. SEC may view PoL as unregistered security offering.",
+            "technical_risks": "Moderate - Multiple network halts, exploit history, production stability concerns",
+            "market_risks": "High - Bear market for L1s, low float/high FDV backlash, 84.7% of 2025 TGEs underwater",
+            "competitive_risks": "High - Ethereum, Solana, Avalanche far ahead. PoL unproven.",
+            "overall_risk_rating": "HIGH - Multiple existential threats. Not suitable for risk-averse investors."
+        },
+        "section_11_summary_recommendations": {
+            "investment_thesis": {
+                "bull_case": "If PoL proves successful and TVL stabilizes, Berachain could carve niche as DeFi-native L1. Current valuation deeply discounted ($300-450M FDV vs $1.5B raise). 940K+ community, Tier-1 VCs, active development. Potential 3-10x IF turnaround.",
+                "bear_case": "93% crash, 85% user loss, 71% TVL decline = failing product-market fit. VC unlock Feb 2026 adds 12% supply with underwater investors. Tokenomics favor insiders. Anonymous team, insider selling, security exploits. Could go to zero.",
+                "base_case": "Gradual decline to $100-200M FDV as users/TVL bleed out. PoL remains unproven. Becomes niche L1 or fails entirely."
+            },
+            "target_investor_profile": "HIGH RISK TOLERANCE ONLY. Suitable for VC/speculative traders who can afford 100% loss. NOT for retail or conservative investors.",
+            "entry_strategy": "AVOID near-term. Wait for: (1) VC unlock resolution (post-Feb 6, 2026), (2) TVL stabilization >3 months, (3) user growth resumption, (4) team transparency improvements.",
+            "exit_strategy": "IF entering, set tight stop-losses. Exit on any: (1) Further 20%+ TVL decline, (2) Additional insider selling revelations, (3) Failure to stabilize post-VC unlock.",
+            "key_milestones_to_watch": [
+                "Feb 6, 2026: VC token unlock - critical test",
+                "Q1 2026: Bectra hard fork (10x faster transactions)",
+                "Q2 2026: PoL V2 launch",
+                "Ongoing: TVL and user retention trends",
+                "Brevan Howard refund deadline (Feb 6, 2026)"
+            ],
+            "red_flags_requiring_immediate_exit": [
+                "Another security exploit >$5M",
+                "TVL drops below $500M",
+                "MAU drops below 200K",
+                "Additional insider selling confirmed",
+                "Regulatory action",
+                "Key team members exit"
+            ],
+            "final_verdict": "AVOID - Despite innovative tech and strong VC backing, Berachain exhibits classic signs of failed launch: 93% price crash, 85% user loss, insider controversies, security issues. VC unlock Feb 2026 likely triggers further decline. Only consider if price drops another 50%+ and fundamentals reverse. Current score 48/100 = WEAK rating.",
+            "comparable_opportunities": "Better risk/reward: Ethereum L2s (Arbitrum, Optimism), established L1s (Avalanche, Polygon), or wait for Berachain to prove viability at lower valuation."
+        },
+        "job_id": "pretge_1769690028346_bm9gersg6",
+        "started_at": "2026-01-29T12:33:48.346Z",
+        "completed_at": "2026-01-29T12:36:06.973Z",
+        "execution_time_seconds": 139
+    }
+]
+```

@@ -1,0 +1,27 @@
+---
+title: "How It Works"
+description: "Automated data collection and cross-validation pipeline"
+---
+
+## How It Works
+
+The API automatically collects and cross-validates current public data during each request:
+
+### Automated Data Collection
+
+- Current price / market cap / volume / supply (market data aggregators)
+- ATH / ATL and historical context (market data aggregators)
+- Revenue, fees, active users (protocol analytics providers)
+- Unlock schedules and vesting info (tokenomics trackers + disclosures)
+- Holder distribution and large-holder activity (blockchain explorers)
+- Social/community signals (public channels)
+- Competitor and market positioning research
+
+No manual data input is required beyond `project` + `project_url`.
+
+## Important Notes
+
+1. **Automated Data Collection**: The API collects and cross-checks relevant public data for each request.
+2. **Real-Time Analysis**: Data is collected in real-time during each request.
+3. **Data Accuracy**: If conflicting information is found, the engine uses the most recent and most reliable source.
+4. **Rate Limits**: Consider request throttling on your end for production usage.

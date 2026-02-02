@@ -1,0 +1,36 @@
+---
+title: "Request Parameters"
+description: "Required and optional parameters for the Scoring API"
+---
+
+## Required Parameters
+
+| Parameter | Type | Description | Values |
+|---|---|---|---|
+| `type` | string | Analysis type | `"posttge"` or `"pretge"` |
+| `project` | string | Project or token name | Example: `"LayerZero"` |
+| `project_url` | string | Website or CMC/CoinGecko link | `"https://layerzero.network"` or `"https://coinmarketcap.com/currencies/layerzero/"` |
+
+## Optional Parameters
+
+| Parameter | Type | Description | Default |
+|---|---|---|---|
+| `token_symbol` | string | Token ticker symbol | `null` |
+| `category` | string | Project category | `null` |
+| `blockchain` | string | Primary blockchain | `null` |
+| `stage` | string | Project stage (primarily for Pre-TGE) | `null` |
+| `output_format` | string | Response format: `"minimal"`, `"standard"`, or `"full"` | `"full"` |
+
+## Example Request Body
+
+```json
+{
+  "type": "posttge",
+  "project": "LayerZero",
+  "project_url": "https://layerzero.network",
+  "token_symbol": "ZRO",
+  "category": "Omnichain Protocol",
+  "blockchain": "Ethereum",
+  "output_format": "standard"
+}
+```

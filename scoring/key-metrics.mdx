@@ -1,0 +1,88 @@
+---
+title: "Key Metrics"
+description: "VFR, Financial Evolution, and Unit Economics"
+---
+
+## VFR (Value-to-Fair Ratio)
+
+Proprietary valuation metric comparing current market cap to calculated fair value.
+
+### Structure
+
+```json
+{
+  "value": 0.97,
+  "zone": "FAIR",
+  "fair_mc": 590000000,
+  "current_mc": 573000000,
+  "interpretation": "Trading near fair value"
+}
+```
+
+### Zones
+
+| VFR Range | Zone |
+|---|---|
+| `< 0.7` | UNDERVALUED |
+| `0.7 - 1.3` | FAIR |
+| `1.3 - 2.0` | PREMIUM |
+| `> 2.0` | OVERVALUED |
+
+### Calculation
+
+```
+Fair MC = (Comparable_MC x 0.4) + (Revenue_Multiple x 0.4) + (Trust_Premium x 0.2) - Supply_Discount
+VFR = Current_MC / Fair_MC
+```
+
+---
+
+## Financial Evolution (Post-TGE only)
+
+Tracks revenue development over time using data from protocol analytics providers and project disclosures.
+
+### Structure
+
+```json
+{
+  "quarterly_revenue": [
+    {
+      "quarter": "Q4 2024",
+      "revenue": 11500000,
+      "growth_qoq": 35
+    },
+    {
+      "quarter": "Q1 2025",
+      "revenue": 15200000,
+      "growth_qoq": 32
+    }
+  ],
+  "annual_run_rate": 60800000,
+  "revenue_streams": {
+    "protocol_fees": 65,
+    "transaction_fees": 25,
+    "other": 10
+  },
+  "fee_switch_status": "ACTIVE",
+  "token_holder_share": 40
+}
+```
+
+---
+
+## Unit Economics (Post-TGE only)
+
+Protocol sustainability metrics calculated from on-chain and reported data.
+
+### Structure
+
+```json
+{
+  "revenue_per_user": 48.64,
+  "user_acquisition_cost": 85,
+  "ltv_to_cac_ratio": 6.8,
+  "monthly_burn_rate": 2500000,
+  "treasury_runway_months": 36,
+  "sustainability_score": 8.2
+}
+```
