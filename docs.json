@@ -1,13 +1,13 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "RateXAI Documentation",
+  "theme": "maple",
+  "name": "RateXAI Docs",
   "colors": {
     "primary": "#6366F1",
     "light": "#818CF8",
     "dark": "#4F46E5"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/images/Favicon.svg",
   "navigation": {
     "tabs": [
       {
@@ -79,10 +79,7 @@
       "anchors": []
     }
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
+  "logo": "/images/RateXAIlogo-dark.svg",
   "navbar": {
     "links": [
       {
