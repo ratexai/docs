@@ -120,7 +120,10 @@
       "anchors": []
     }
   },
-  "logo": "/images/RateXAIlogo-dark.svg",
+  "logo": {
+    "light": "/images/RateXAIlogo-dark.svg",
+    "dark": "/images/RateXAIlogo-wihite.svg"
+  },
   "navbar": {
     "links": [
       {
