@@ -108,8 +108,6 @@
             "group": "Architecture",
             "pages": [
               "internals/technical-details",
-              "internals/n8n-workflow",
-              "internals/scoring-prompts",
               "examples/example-report"
             ]
           }
