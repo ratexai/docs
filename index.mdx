@@ -1,97 +1,41 @@
 ---
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
+title: "RateXAI Scoring API"
+description: "Public Documentation (Draft v0.1) — Pre-TGE and Post-TGE scoring for any crypto token via API"
 ---
 
-## Setting up
+RateXAI provides two distinct, purpose-built scoring models under the **RXAI Model v1** umbrella:
 
-Get your documentation site up and running in minutes.
+- **Pre-TGE Scoring**: for projects in fundraising and pre-listing stages (e.g., launchpads such as CoinList), with an upcoming TGE.
+- **Post-TGE Scoring**: for tokens already listed and trading, including mature assets with longer market history.
 
-<Card
-  title="Start here"
-  icon="rocket"
-  href="/quickstart"
-  horizontal
->
-  Follow our three step quickstart guide.
-</Card>
+Both models output a **letter-grade rating** (e.g., AAA/B/C/D and extended bands) plus a **0-100 score**, designed to support decision-making for:
 
-## Make it yours
+- screening and comparing opportunities before listing,
+- risk-aware evaluation of listed tokens for potential entry, sizing, and monitoring.
 
-Design a docs site that looks great and empowers your users.
+RXAI compiles a full report by combining **public sources** (market data, tokenomics, explorers, analytics) with **RateXAI Big Data signals**. These endpoints are designed for **product integration** (dashboards, terminals, alerts, research flows) and automated pipelines.
 
-<Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
-  >
-    Edit your docs locally and preview them in real time.
+## Overview
+
+RateXAI Scoring API delivers Pre-TGE and Post-TGE token ratings powered by the RXAI Model. Each request runs an automated research pipeline that aggregates, normalizes, and cross-validates signals from 1,000+ sources — combining RateXAI BigData with external feeds (market data, on-chain explorers, tokenomics/unlocks, protocol analytics, GitHub/dev activity, news/media, social and ecosystem signals).
+
+<CardGroup cols={2}>
+  <Card title="Quickstart" icon="rocket" href="/quickstart">
+    Get your API key and make your first scoring request.
   </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
+  <Card title="API Reference" icon="code" href="/api-reference/introduction">
+    Endpoint, authentication, request parameters, and response formats.
   </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
+  <Card title="Post-TGE Scoring" icon="chart-line" href="/scoring/post-tge">
+    12-section comprehensive report for listed tokens.
   </Card>
-  <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
+  <Card title="Pre-TGE Scoring" icon="seedling" href="/scoring/pre-tge">
+    11-section comprehensive report for pre-launch projects.
   </Card>
-</Columns>
-
-## Create beautiful pages
-
-Everything you need to create world-class documentation.
-
-<Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
+  <Card title="Rating Scale" icon="star" href="/scoring/rating-scale">
+    Scoring factors, point weights, and rating bands.
   </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
+  <Card title="Key Metrics" icon="gauge" href="/scoring/key-metrics">
+    VFR, Financial Evolution, and Unit Economics.
   </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
-  </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
-  </Card>
-</Columns>
-
-## Need inspiration?
-
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  Browse our showcase of exceptional documentation sites.
-</Card>
+</CardGroup>

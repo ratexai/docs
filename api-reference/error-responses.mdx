@@ -1,0 +1,56 @@
+---
+title: "Error Responses"
+description: "Error codes, formats, and common causes"
+---
+
+## 400 — Bad Request (Validation Error)
+
+```json
+{
+  "error": "Missing required field: type",
+  "statusCode": 400,
+  "error_type": "validation_error"
+}
+```
+
+Common causes:
+- Missing required fields (`type`, `project`, `project_url`)
+- Invalid `type` value (must be `"pretge"` or `"posttge"`)
+
+## 422 — Unprocessable Entity (Processing Error)
+
+```json
+{
+  "error": "Could not parse JSON from model response",
+  "job_id": "posttge_1737123456789_abc123xyz",
+  "statusCode": 422,
+  "error_type": "processing_error"
+}
+```
+
+Common causes:
+- Model returned invalid JSON
+- Data parsing failed
+- Insufficient data available for analysis
+
+## 500 — Internal Server Error
+
+```json
+{
+  "error": "Internal error message",
+  "job_id": "posttge_1737123456789_abc123xyz",
+  "statusCode": 500,
+  "error_type": "internal_error"
+}
+```
+
+## 504 — Gateway Timeout
+
+```json
+{
+  "error": "Request timeout",
+  "job_id": "posttge_1737123456789_abc123xyz",
+  "statusCode": 504,
+  "error_type": "timeout"
+}
+```
