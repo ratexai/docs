@@ -1,0 +1,43 @@
+---
+title: "Chain Data API"
+description: "Indexed aggregates packs — not raw full-history dumps"
+---
+
+## Indexed Chain Data API (Aggregates Packs)
+
+Indexed aggregates packs (not raw full-history dumps). Sold by chain scope and freshness.
+
+## Pricing
+
+| SKU | Scope | Freshness | Delivery | Price / month |
+|---|---|---|---|---:|
+| CHAIN-1500 | Solana aggregates pack | daily + intraday snapshots | API + daily export | $1,500 |
+| CHAIN-3500 | multi-chain aggregates pack | daily + intraday snapshots | API + exports | $3,500 |
+| CHAIN-7500 | institutional aggregates + SLA | near-RT by SLA | API + SLA | $7,500 |
+
+---
+
+## Example Endpoint Categories
+
+| Category | Endpoints |
+|---|---|
+| Market snapshot | `GET /v1/solana/market/{asset}/snapshot` |
+| Holders snapshot | `GET /v1/solana/{asset}/holders/snapshot` |
+| Liquidity pools (scope-based) | `GET /v1/solana/{asset}/liquidity/pools` |
+| Exports | `GET /v1/solana/exports/daily` |
+
+<Card title="Chain Data API Reference" icon="code" href="/api-reference/chain-data-overview">
+  Full endpoint documentation, authentication, and response formats.
+</Card>
+
+---
+
+## Primary Use Cases
+
+| Use case | Buyer | Outcome | Best fit |
+|---|---|---|---|
+| Solana market pack | Solana apps, bots | fast aggregates | CHAIN-1500 |
+| Holder concentration feed | listing, risk teams | holder risk | CHAIN-1500 |
+| Liquidity snapshot | MM, trading desks | liquidity visibility | CHAIN-1500/3500 |
+| Multi-chain BI pack | data providers, BI | unified coverage | CHAIN-3500 |
+| Near-RT aggregates | institutions | faster updates | CHAIN-7500 |

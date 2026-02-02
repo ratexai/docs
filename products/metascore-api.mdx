@@ -1,0 +1,45 @@
+---
+title: "MetaScore API"
+description: "rMS API — real-time scoring for product integration and automated pipelines"
+---
+
+## MetaScore API (rMS API)
+
+Sold as an API marketplace by use case. Primary limit is assets/objects per month.
+
+## Pricing
+
+| SKU | Objects / month | Freshness | Delivery | Price / month | Optional calls cap |
+|---|---:|---|---|---:|---:|
+| API-900 | 50 assets | daily | JSON API + daily export | $900 | 200k |
+| API-2500 | 500 assets | daily + intraday snapshots | JSON API + exports | $2,500 | 1M |
+| API-5000 | unlimited (fair use) | intraday + webhooks by SLA | JSON API + exports + webhooks | $5,000 | 5M |
+
+---
+
+## Core Endpoints (Public-Facing)
+
+| Category | Endpoints |
+|---|---|
+| Score | `GET /v1/rms/{asset}` |
+| Breakdown | `GET /v1/rms/{asset}/breakdown` |
+| Batch | `POST /v1/rms/batch` |
+| Watchlist | `GET /v1/rms/whitelist` |
+| Exports | `GET /v1/exports/rms/daily` |
+
+<Card title="MetaScore API Reference" icon="code" href="/api-reference/metascore-overview">
+  Full endpoint documentation, authentication, and response formats.
+</Card>
+
+---
+
+## Primary Use Cases
+
+| Use case | Buyer | Outcome | Best fit |
+|---|---|---|---|
+| Portfolio risk gate | funds, wallets, portfolio apps | fast risk score | API-900 |
+| Token page widget | terminals, data UIs | embed rating + flags | API-900 |
+| Batch screening (hundreds) | research, quant teams | rank many assets | API-2500 |
+| Watchlist monitoring + alerts | trading desks | alerts on changes | API-5000 |
+| Compliance pre-check | risk, compliance | flags + explainability | API-2500 |
+| Daily factor feed | quant teams | stable daily dataset | API-2500 |

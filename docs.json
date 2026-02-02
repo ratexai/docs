@@ -46,16 +46,57 @@
         ]
       },
       {
+        "tab": "Products & Pricing",
+        "groups": [
+          {
+            "group": "Product Catalog",
+            "pages": [
+              "products/overview",
+              "products/scoring-suite",
+              "products/metascore-api",
+              "products/chain-data-api"
+            ]
+          },
+          {
+            "group": "Enterprise Solutions",
+            "pages": [
+              "products/enterprise",
+              "products/data-factory"
+            ]
+          },
+          {
+            "group": "Pilot Modules",
+            "pages": [
+              "products/pilot-modules"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "API Reference",
         "groups": [
           {
-            "group": "API",
+            "group": "Scoring API",
             "pages": [
               "api-reference/introduction",
               "api-reference/request-parameters",
               "api-reference/response-formats",
               "api-reference/error-responses",
               "api-reference/response-times"
+            ]
+          },
+          {
+            "group": "MetaScore API",
+            "pages": [
+              "api-reference/metascore-overview",
+              "api-reference/metascore-endpoints"
+            ]
+          },
+          {
+            "group": "Chain Data API",
+            "pages": [
+              "api-reference/chain-data-overview",
+              "api-reference/chain-data-endpoints"
             ]
           }
         ]

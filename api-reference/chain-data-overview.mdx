@@ -1,0 +1,46 @@
+---
+title: "Chain Data API Overview"
+description: "Indexed aggregates packs by chain scope and freshness"
+---
+
+## Indexed Chain Data API
+
+Indexed aggregates packs (not raw full-history dumps). Provides pre-processed, normalized on-chain data snapshots for Solana and multi-chain environments.
+
+## Authentication
+
+```http
+X-API-Key: YOUR_API_KEY
+Content-Type: application/json
+```
+
+## Base URL
+
+```
+https://api.ratex.ai/v1/solana
+```
+
+## Tier Summary
+
+| SKU | Scope | Freshness | Delivery | Price / month |
+|---|---|---|---|---:|
+| CHAIN-1500 | Solana aggregates pack | daily + intraday snapshots | API + daily export | $1,500 |
+| CHAIN-3500 | multi-chain aggregates pack | daily + intraday snapshots | API + exports | $3,500 |
+| CHAIN-7500 | institutional aggregates + SLA | near-RT by SLA | API + SLA | $7,500 |
+
+<Note>
+  Detailed request/response specifications are provided with API access. See [Chain Data API pricing](/products/chain-data-api) for full commercial details.
+</Note>
+
+## Endpoint Categories
+
+| Category | Endpoint | Description |
+|---|---|---|
+| Market snapshot | `GET /v1/solana/market/{asset}/snapshot` | Price, volume, market cap snapshot |
+| Holders snapshot | `GET /v1/solana/{asset}/holders/snapshot` | Holder distribution and concentration |
+| Liquidity pools | `GET /v1/solana/{asset}/liquidity/pools` | Liquidity pool data (scope-based) |
+| Exports | `GET /v1/solana/exports/daily` | Daily export of all aggregates |
+
+<Card title="Full Endpoint Documentation" icon="arrow-right" href="/api-reference/chain-data-endpoints">
+  Endpoint details, parameters, and response structures.
+</Card>
